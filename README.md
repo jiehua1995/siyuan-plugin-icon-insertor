@@ -8,7 +8,7 @@ A plugin to automatically insert webpage icons before hyperlinks in SiYuan Note.
 
 ## Installation
 
-1. Download the plugin and place it in the SiYuan plugin directory.
+1. Install the plugin in SiYuan Note.
 2. Enable the plugin in the SiYuan settings.
 
 ## Usage
