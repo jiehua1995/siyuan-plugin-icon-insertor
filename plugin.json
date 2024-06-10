@@ -1,0 +1,10 @@
+{
+    "name": "Auto Favicon Inserter",
+    "author": "Your Name",
+    "url": "https://github.com/yourusername/my-siyuan-plugin",
+    "version": "1.0.0",
+    "description": "A plugin to automatically insert webpage icons before hyperlinks.",
+    "siyuanMinVersion": "1.0.0",
+    "icon": "icon.png"
+  }
+  
