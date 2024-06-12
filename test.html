@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <span data-type="a" data-href="https://stadt.muenchen.de/en/info/residence-registration.html">::before "https://stadt.muenchen.de/en/info/residence-registration.html"</span>
+    <span data-type="b" data-href="https://another.com">::before "https://another.com"</span>
+    <span data-type="a" data-href="https://www.baidu.com">::before "https://www.baidu.com"</span>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 获取所有 data-type="a" 的 <span> 元素
+            const spans = document.querySelectorAll('span[data-type="a"]');
+
+            // 遍历这些 <span> 元素
+            spans.forEach(span => {
+                // 获取 data-href 属性中的链接
+                const href = span.getAttribute('data-href');
+                if (href) {
+                    // 提取链接的域名
+                    const url = new URL(href);
+                    const domain = url.hostname;
+
+                    // 生成 DuckDuckGo favicon URL
+                    const faviconURL = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+
+                    // 创建图标元素
+                    const icon = document.createElement('img');
+                    icon.src = faviconURL;
+                    icon.className = 'icon';
+                    icon.alt = 'icon';
+
+                    // 插入图标到 span 的内容前
+                    span.insertBefore(icon, span.firstChild);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
